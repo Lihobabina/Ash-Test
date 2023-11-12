@@ -48,25 +48,25 @@ const imgElement = document.querySelector('.tablet-home-img');
 observer.observe(imgElement);
 
 ///
-let btnSubmit = document.querySelector('.submit-form');
-btnSubmit.addEventListener('click', submitForm())
-function submitForm() {
-  var form = document.getElementById('form');
-  var formData = new FormData(form);
+// let btnSubmit = document.querySelector('.submit-form');
+// btnSubmit.addEventListener('click', submitForm())
+// function submitForm() {
+//   var form = document.getElementById('form');
+//   var formData = new FormData(form);
 
-  fetch('sender.php', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-      if (data === 'Success') {
-          alert('Success');
-      } else {
-          console.log(data); // Вывести ошибку в консоль в случае неудачи
-      }
-  })
-  .catch(error => {
-      console.error('Ошибка:', error);
-  });
-}
+//   fetch('sender.php', {
+//       method: 'POST',
+//       body: formData
+//   })
+//   .then(response => response.text())
+//   .then(data => {
+//       if (data === 'Success') {
+//           alert('Success');
+//       } else {
+//           console.log(data); // Вывести ошибку в консоль в случае неудачи
+//       }
+//   })
+//   .catch(error => {
+//       console.error('Ошибка:', error);
+//   });
+// }
